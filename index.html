@@ -13,6 +13,7 @@
 
 </head>
 <body>
+    <a class="skip-to-content" href="#home">Skip to main content</a>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -28,11 +29,11 @@
                 <li><a href="#registration" class="nav-link">Register</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -47,7 +48,7 @@
             <div class="hero-details">
                 <div class="hero-date">
                     <i class="fas fa-calendar"></i>
-                    <span>February 2026 (Tentative, Dates TBA)</span>
+                    <span>Conference dates: official announcement pending</span>
                 </div>
                 <div class="hero-location">
                     <i class="fas fa-map-marker-alt"></i>
@@ -59,24 +60,7 @@
                 <a href="#registration" class="btn btn-primary">Register Now</a>
                 <a href="#papers" class="btn btn-secondary">Submit Paper</a>
             </div>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span id="days" class="countdown-value">00</span>
-                    <span class="countdown-label">Days</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="hours" class="countdown-value">00</span>
-                    <span class="countdown-label">Hours</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="minutes" class="countdown-value">00</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="seconds" class="countdown-value">00</span>
-                    <span class="countdown-label">Seconds</span>
-                </div>
-            </div>
+            <p class="conference-status" role="status">Programme and confirmed dates will be published here when officially announced.</p>
         </div>
     </section>
 
@@ -143,11 +127,11 @@
             <div class="speakers-grid">
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <img src="1.jpeg" alt="Dr. Dilip Kumar" onerror="console.log('Image failed to load:', this.src); this.style.border='2px solid red';">
+                        <img src="1.jpeg" alt="Dr. Dilip Kumar" loading="lazy">
 
                     </div>
                     <h3>Dr. Dilip Kumar</h3>
-                    <p class="speaker-title">Assitant Professor/Convenor</p>
+                    <p class="speaker-title">Assistant Professor / Convenor</p>
                     <p class="speaker-org">Dept. of CSE, NIT Jamshedpur</p>
                 </div>
 
@@ -155,7 +139,7 @@
 
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <img src="https://via.placeholder.com/300x300" alt="Speaker 2">
+                        <div class="speaker-placeholder" role="img" aria-label="Speaker photograph to be announced"><i class="fas fa-user" aria-hidden="true"></i></div>
                     </div>
                     <h3>Prof. Danish Ali Khan</h3>
                     <p class="speaker-title">Head, Department of Computer Science & Engineering</p>
@@ -163,7 +147,7 @@
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-image">
-                        <img src="https://via.placeholder.com/300x300" alt="Speaker 3">
+                        <div class="speaker-placeholder" role="img" aria-label="Speaker photograph to be announced"><i class="fas fa-user" aria-hidden="true"></i></div>
                     </div>
                     <h3>Dr. Gowtam Sutradhar</h3>
                     <p class="speaker-title">Director/Patron</p>
@@ -179,90 +163,10 @@
         <h2 class="section-title">Conference Schedule</h2>
         <p class="section-subtitle">Important Dates & Timeline</p>
         
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <span class="date-day">14</span>
-                    <span class="date-month">December 2024</span>
-                </div>
-                <div class="timeline-content">
-                    <h3>Last Date for Registration</h3>
-                    <p>Final deadline for all participant registrations</p>
-                    <span class="timeline-status status-upcoming">Upcoming</span>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <span class="date-day">14</span>
-                    <span class="date-month">January 2025</span>
-                </div>
-                <div class="timeline-content">
-                    <h3>Notification of Paper Acceptance</h3>
-                    <p>Authors will be notified about their paper acceptance status</p>
-                    <span class="timeline-status status-upcoming">Upcoming</span>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">
-                    <span class="date-day">14</span>
-                    <span class="date-month">February 2025</span>
-                </div>
-                <div class="timeline-content">
-                    <h3>Final Paper Submission</h3>
-                    <p>Deadline for camera-ready paper submission</p>
-                    <span class="timeline-status status-upcoming">Upcoming</span>
-                </div>
-            </div>
-            
-            <div class="timeline-item highlight">
-                <div class="timeline-date">
-                    <span class="date-day">21-23</span>
-                    <span class="date-month">February 2025</span>
-                </div>
-                <div class="timeline-content">
-                    <h3>Conference Days</h3>
-                    <p>Three days of keynotes, presentations, workshops, and networking</p>
-                    <span class="timeline-status status-conference">Main Event</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="schedule-details">
-            <h3>Conference Program Overview</h3>
-            <div class="day-schedule">
-                <div class="schedule-day">
-                    <h4>Day 1 - February 21, 2025</h4>
-                    <ul>
-                        <li><i class="fas fa-clock"></i> 9:00 AM - Registration & Welcome Coffee</li>
-                        <li><i class="fas fa-clock"></i> 10:00 AM - Inaugural Ceremony</li>
-                        <li><i class="fas fa-clock"></i> 11:00 AM - Keynote Session 1</li>
-                        <li><i class="fas fa-clock"></i> 2:00 PM - Technical Sessions</li>
-                        <li><i class="fas fa-clock"></i> 5:00 PM - Networking Reception</li>
-                    </ul>
-                </div>
-                <div class="schedule-day">
-                    <h4>Day 2 - February 22, 2025</h4>
-                    <ul>
-                        <li><i class="fas fa-clock"></i> 9:00 AM - Keynote Session 2</li>
-                        <li><i class="fas fa-clock"></i> 10:30 AM - Paper Presentations</li>
-                        <li><i class="fas fa-clock"></i> 2:00 PM - Workshop Sessions</li>
-                        <li><i class="fas fa-clock"></i> 4:00 PM - Poster Session</li>
-                        <li><i class="fas fa-clock"></i> 7:00 PM - Conference Dinner</li>
-                    </ul>
-                </div>
-                <div class="schedule-day">
-                    <h4>Day 3 - February 23, 2025</h4>
-                    <ul>
-                        <li><i class="fas fa-clock"></i> 9:00 AM - Industry Panel Discussion</li>
-                        <li><i class="fas fa-clock"></i> 11:00 AM - Technical Sessions</li>
-                        <li><i class="fas fa-clock"></i> 2:00 PM - Best Paper Awards</li>
-                        <li><i class="fas fa-clock"></i> 3:00 PM - Valedictory Ceremony</li>
-                        <li><i class="fas fa-clock"></i> 4:00 PM - Closing Remarks</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="schedule-notice">
+            <h3>Schedule pending official confirmation</h3>
+            <p>The earlier draft contained placeholder dates from 2024–2025. Those dates have been removed to avoid presenting outdated information as the 2026 programme.</p>
+            <p>Paper deadlines, acceptance dates, registration deadlines, and the final conference programme will be published after confirmation by the organizing committee.</p>
         </div>
     </div>
 </section>
@@ -288,8 +192,8 @@
                 </div>
             </div>
             <div class="papers-cta">
-                <a href="#" class="btn btn-primary">Submit Paper</a>
-                <a href="#" class="btn btn-secondary">Paper Guidelines</a>
+                <button type="button" class="btn btn-primary action-coming-soon" data-action="Paper submission">Submit Paper</button>
+                <button type="button" class="btn btn-secondary action-coming-soon" data-action="Paper guidelines">Paper Guidelines</button>
             </div>
         </div>
     </section>
@@ -308,7 +212,7 @@
                         <li>Lunch & refreshments</li>
                         <li>Certificate of participation</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Register</a>
+                    <button type="button" class="btn btn-primary registration-coming-soon">Register</button>
                 </div>
                 <div class="reg-card featured">
                     <h3>Academicians</h3>
@@ -320,7 +224,7 @@
                         <li>Certificate of participation</li>
                         <li>Presentation opportunity</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Register</a>
+                    <button type="button" class="btn btn-primary registration-coming-soon">Register</button>
                 </div>
                 <div class="reg-card">
                     <h3>Conference Attendees</h3>
@@ -332,7 +236,7 @@
                         <li>Certificate of participation</li>
                         <li>Networking sessions</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">Register</a>
+                    <button type="button" class="btn btn-primary registration-coming-soon">Register</button>
                 </div>
             </div>
         </div>
@@ -348,7 +252,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>aiconvergence2026@college.edu</p>
+                            <p>Official conference email: to be announced</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -366,12 +270,10 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div class="contact-form contact-notice" role="note">
+                    <h3>Contact form unavailable</h3>
+                    <p>No server-side message handler is configured for this static site. Please use the official contact details once they are published.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -380,11 +282,8 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 AI Convergence. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="social-links" aria-label="Conference social links">
+                <span>Official social-media links will be added when available.</span>
             </div>
         </div>
     </footer>
