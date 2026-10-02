@@ -1,5 +1,8 @@
 # AI Convergence 2026
 
+**Live website:** https://dilipnitjsr.github.io/AI-Convergence-2026/
+
+
 Static website for **AI Convergence 2026 — International Conference on AI Convergence: Interdisciplinary Innovation through Intelligent Systems**, associated with the Department of Computer Science & Engineering, NIT Jamshedpur.
 
 ## Current status
