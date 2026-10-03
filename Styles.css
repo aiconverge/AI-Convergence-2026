@@ -1432,3 +1432,410 @@ button:focus-visible {
         object-position: 58% center;
     }
 }
+
+
+/* ===== FINAL LIGHT HERO + DARK SITE THEME ===== */
+:root {
+    --site-dark: #08111f;
+    --site-dark-2: #0d1728;
+    --site-card: #152238;
+    --site-card-2: #1b2a42;
+    --site-border: #2b3a52;
+    --site-text: #e7edf7;
+    --site-muted: #9aa9bd;
+    --site-blue: #60a5fa;
+    --site-cyan: #22d3ee;
+}
+
+/* Overall dark body */
+body {
+    background: var(--site-dark);
+    color: var(--site-text);
+}
+
+.section {
+    background: var(--site-dark);
+    color: var(--site-text);
+}
+
+.section:nth-of-type(even):not(.hero) {
+    background: var(--site-dark-2);
+}
+
+.section-title {
+    color: #f8fafc;
+}
+
+.section-subtitle {
+    color: var(--site-muted);
+}
+
+/* Dark navigation */
+.navbar {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    background: rgba(8, 17, 31, 0.86);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.16);
+}
+
+.nav-logo h2 {
+    color: #f8fafc;
+}
+
+.nav-link {
+    color: #cbd5e1;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #bfdbfe;
+    background: rgba(59, 130, 246, 0.14);
+}
+
+.hamburger {
+    background: rgba(255,255,255,0.08);
+}
+
+.hamburger span {
+    background: #f8fafc;
+}
+
+/* Light campus hero */
+.hero {
+    position: relative;
+    background: #eaf3fb;
+    color: #0f172a;
+}
+
+.hero-campus-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 44%;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg,
+            rgba(255,255,255,0.80) 0%,
+            rgba(255,255,255,0.62) 34%,
+            rgba(255,255,255,0.24) 66%,
+            rgba(255,255,255,0.08) 100%),
+        linear-gradient(180deg,
+            rgba(255,255,255,0.08) 0%,
+            rgba(255,255,255,0.02) 64%,
+            rgba(8,17,31,0.14) 100%);
+    pointer-events: none;
+}
+
+.hero::after {
+    background: var(--site-dark);
+}
+
+.hero-background {
+    z-index: 1;
+    opacity: 0.10;
+    mix-blend-mode: multiply;
+    background-image:
+        linear-gradient(rgba(15,23,42,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,23,42,0.08) 1px, transparent 1px);
+}
+
+.hero-layout {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-copy {
+    position: relative;
+    isolation: isolate;
+    color: #0f172a;
+    text-align: left;
+    text-shadow: none;
+}
+
+.hero-copy::before {
+    content: "INTERNATIONAL CONFERENCE • 2026";
+    display: inline-flex;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border: 1px solid rgba(15,23,42,0.10);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.88);
+    color: #1e3a8a;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 28px rgba(15,23,42,0.08);
+}
+
+.hero-copy::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -28px -34px;
+    border-radius: 28px;
+    background: rgba(255,255,255,0.42);
+    border: 1px solid rgba(255,255,255,0.52);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 20px 50px rgba(15,23,42,0.10);
+    pointer-events: none;
+}
+
+.hero-title {
+    color: #0f172a;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: #0f172a;
+    text-shadow: none;
+}
+
+.hero-subtitle {
+    color: #1e293b;
+}
+
+.hero-date,
+.hero-location {
+    border-color: rgba(15,23,42,0.10);
+    background: rgba(255,255,255,0.82);
+    color: #0f172a;
+    box-shadow: 0 8px 20px rgba(15,23,42,0.06);
+}
+
+.hero-date i,
+.hero-location i {
+    color: #2563eb;
+}
+
+.conference-status {
+    border-color: rgba(15,23,42,0.10);
+    background: rgba(255,255,255,0.80);
+    color: #334155;
+}
+
+.hero .btn-primary {
+    background: #0f172a;
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(15,23,42,0.20);
+}
+
+.hero .btn-primary:hover {
+    background: #1e293b;
+}
+
+.hero .btn-secondary {
+    border-color: rgba(15,23,42,0.24);
+    background: rgba(255,255,255,0.70);
+    color: #0f172a;
+}
+
+.hero .btn-secondary:hover {
+    background: #ffffff;
+}
+
+/* Light, contrasting AI foreground card */
+.hero-visual-card {
+    border-color: rgba(255,255,255,0.78);
+    background: rgba(250,253,255,0.82);
+    box-shadow: 0 28px 70px rgba(15,23,42,0.18);
+}
+
+.hero-visual-chip {
+    background: rgba(255,255,255,0.96);
+    color: #0f4c81;
+}
+
+.hero-visual-art {
+    background:
+        radial-gradient(circle at 22% 20%, rgba(14,165,233,0.20), transparent 24%),
+        radial-gradient(circle at 78% 18%, rgba(34,211,238,0.17), transparent 26%),
+        linear-gradient(145deg, #f9fcff 0%, #e8f6fb 52%, #d8eef6 100%);
+    box-shadow: inset 0 0 0 1px rgba(15,23,42,0.08);
+}
+
+.circuit-grid {
+    opacity: 0.55;
+}
+
+.ai-core {
+    background: linear-gradient(145deg, #ffffff, #e6f8fb);
+    color: #0f766e;
+    box-shadow:
+        0 22px 45px rgba(15,23,42,0.16),
+        0 0 0 14px rgba(8,145,178,0.07);
+}
+
+.ai-orbit {
+    border-color: rgba(8,145,178,0.30);
+}
+
+.ai-node {
+    background: #06b6d4;
+    box-shadow: 0 0 0 7px rgba(6,182,212,0.12), 0 0 22px rgba(6,182,212,0.38);
+}
+
+.ai-line {
+    background: linear-gradient(90deg, rgba(6,182,212,0.06), rgba(8,145,178,0.72), rgba(6,182,212,0.06));
+    box-shadow: 0 0 14px rgba(8,145,178,0.24);
+}
+
+.ai-panel {
+    border-color: rgba(15,23,42,0.08);
+    background: rgba(255,255,255,0.90);
+    color: #0f172a;
+}
+
+.ai-panel i {
+    color: #0891b2;
+}
+
+/* Dark content cards */
+.about-text,
+.feature,
+.speaker-card,
+.schedule-notice,
+.papers-info,
+.reg-card,
+.contact-info,
+.contact-notice {
+    background: var(--site-card);
+    border-color: var(--site-border);
+    color: var(--site-text);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.22);
+}
+
+.about-text > p:first-child,
+.about-text h3,
+.feature h3,
+.speaker-card h3,
+.schedule-notice h3,
+.papers-info h3,
+.reg-card h3,
+.contact-item h4,
+.contact-notice h3 {
+    color: #f8fafc;
+}
+
+.feature p,
+.speaker-org,
+.schedule-notice p,
+.papers-info > p,
+.contact-item p,
+.contact-notice p,
+.stat p {
+    color: var(--site-muted);
+}
+
+.speakers {
+    background: linear-gradient(180deg, var(--site-dark-2) 0%, var(--site-dark) 100%);
+}
+
+.schedule {
+    background: var(--site-dark);
+}
+
+.registration {
+    background: linear-gradient(180deg, #0b1424 0%, #101a2e 100%);
+}
+
+.stat {
+    background: var(--site-card-2);
+}
+
+.stat h3,
+.price,
+.speaker-title {
+    color: #7dd3fc;
+}
+
+.topics-list li {
+    border-color: #334155;
+    background: var(--site-card-2);
+    color: #e5e7eb;
+}
+
+.topics-list i,
+.reg-card li::before {
+    color: #34d399;
+}
+
+.reg-card li {
+    color: #cbd5e1;
+}
+
+.reg-card.featured {
+    border-color: #3b82f6;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.28);
+}
+
+.reg-card.featured::before {
+    background: rgba(59,130,246,0.18);
+    color: #bfdbfe;
+}
+
+.papers .btn-secondary {
+    border-color: #3b4a62;
+    background: var(--site-card-2);
+    color: #bfdbfe;
+}
+
+.contact-item + .contact-item {
+    border-color: var(--site-border);
+}
+
+.contact-item i {
+    background: rgba(59,130,246,0.14);
+    color: #7dd3fc;
+}
+
+.footer {
+    background: #050b14;
+    border-top-color: rgba(148,163,184,0.10);
+}
+
+/* Mobile dark menu + light hero */
+@media (max-width: 980px) {
+    .nav-menu {
+        border-color: var(--site-border);
+        background: rgba(8,17,31,0.98);
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .hero-copy::after {
+        inset: -22px -16px;
+        background: rgba(255,255,255,0.54);
+    }
+
+    .hero-copy .hero-buttons,
+    .hero-copy .hero-details {
+        justify-content: center;
+    }
+
+    .hero-copy .hero-subtitle,
+    .hero-copy .conference-status {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero-campus-image {
+        object-position: 58% center;
+    }
+
+    .hero-copy::after {
+        background: rgba(255,255,255,0.62);
+    }
+}
