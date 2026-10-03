@@ -45,12 +45,12 @@ window.addEventListener('scroll', () => {
 
     navbar.style.background =
         currentScroll > 100
-            ? 'rgba(255, 255, 255, 0.98)'
-            : 'rgba(255, 255, 255, 0.95)';
+            ? 'rgba(8, 17, 31, 0.96)'
+            : 'rgba(8, 17, 31, 0.86)';
     navbar.style.boxShadow =
         currentScroll > 100
-            ? '0 2px 20px rgba(0, 0, 0, 0.1)'
-            : '0 2px 10px rgba(0, 0, 0, 0.1)';
+            ? '0 8px 30px rgba(0, 0, 0, 0.24)'
+            : '0 6px 22px rgba(0, 0, 0, 0.16)';
 
     navbar.style.transform =
         currentScroll > lastScroll && currentScroll > 500
