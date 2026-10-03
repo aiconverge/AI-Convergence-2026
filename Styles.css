@@ -1063,8 +1063,7 @@ button:focus-visible {
     background:
         linear-gradient(110deg, rgba(4, 12, 32, 0.72) 0%, rgba(9, 22, 58, 0.54) 42%, rgba(25, 20, 72, 0.34) 100%),
         radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.16), transparent 24%),
-        radial-gradient(circle at 88% 14%, rgba(168, 85, 247, 0.18), transparent 28%),
-        url("./assets/nitjsr-campus-hero.jpg") center 44% / cover no-repeat;
+        radial-gradient(circle at 88% 14%, rgba(168, 85, 247, 0.18), transparent 28%);
 }
 
 .hero-layout {
@@ -1390,5 +1389,46 @@ button:focus-visible {
     .hero-copy::after {
         inset: -24px -18px;
         background: rgba(2, 6, 23, 0.42);
+    }
+}
+
+
+/* Explicit campus photo layer — reliable on GitHub Pages */
+.hero-campus-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 44%;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.hero::before {
+    z-index: 1;
+    background:
+        linear-gradient(110deg,
+            rgba(3, 10, 27, 0.62) 0%,
+            rgba(6, 18, 47, 0.42) 42%,
+            rgba(24, 18, 65, 0.22) 100%),
+        linear-gradient(180deg,
+            rgba(2, 6, 23, 0.02) 0%,
+            rgba(2, 6, 23, 0.08) 65%,
+            rgba(2, 6, 23, 0.18) 100%);
+}
+
+.hero-background {
+    z-index: 1;
+}
+
+.hero-layout {
+    z-index: 2;
+}
+
+@media (max-width: 720px) {
+    .hero-campus-image {
+        object-position: 58% center;
     }
 }
